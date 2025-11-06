@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+class Complex {
+private:
+    float real;
+    float imaginary;
+ public:
+    Complex(){
+        real=0;
+        imaginary=0;
+        
+    }
+    Complex(float r){
+        real = r;
+        imaginary =0;
+        
+    }
+    Complex(float r,float i){
+        real = r;
+        imaginary =i;
+        
+    }
+    void displayComplex(){
+        cout<< real <<" +"<<imaginary<<"i"<<endl;
+        
+    }
+};
+int main(){
+    Complex c1;
+    cout<< "complex 1 (default constructor):"<<endl;
+    c1.displayComplex();
+    float r;
+    float i;
+    cout<<"Enter the real number r:"<<endl;
+    cin>>r;
+    Complex c2(r);
+    cout<< "Complex 2 (parameterised constructor):"<<endl;
+    c2.displayComplex();
+    
+    cout<< "Enter the real number r:"<<endl;
+    cin>>r;
+    cout<<"Enter the imaginary number i:"<<endl;
+    cin>>i;
+    Complex c3(r,i);
+    cout<< "Complex 3 (parameterised constructor):"<<endl;
+    c3.displayComplex();
+    
+}
