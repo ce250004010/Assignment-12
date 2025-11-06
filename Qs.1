@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:    
+    int length;
+    int breadth;
+public:
+    Rectangle(){
+    length=1;
+    breadth=1;
+}
+    Rectangle(int l, int b){
+    length=l;
+    breadth=b;
+}
+    void displayAreas (){
+        int area =length * breadth;
+        cout<<"Area of the rectangle:"<< area <<endl;
+    }
+    void displayDimensions (){
+        cout<< "Length:" << length << "Breadth:" << breadth <<endl;
+    }
+};
+
+int main() {
+    int l;
+    int b;
+    Rectangle rect1;
+    cout << "Rectangle 1 (default constructor) :" <<endl;
+    rect1.displayDimensions();
+    rect1.displayAreas();
+    cout<<"Enter your length:"<<endl;
+    cin>>l;
+    cout<< "Enter your breadth:"<<endl;
+    cin>>b;
+    Rectangle rect2(l,b);
+    cout << "Rectangle 2 (parameterised constructor) :" <<endl;
+    rect2.displayDimensions();
+    rect2.displayAreas();
+    
+    
+    
+    
+
+    return 0;
+}
